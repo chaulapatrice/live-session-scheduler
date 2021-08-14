@@ -3,7 +3,7 @@ from .models import Expert
 class AddExpertForm(forms.ModelForm):
     class Meta:
         model = Expert
-        fields = "__all__"
+        fields = ['name', 'email', 'description', 'contact']
 
 
 class SelectExpertForm(forms.Form):

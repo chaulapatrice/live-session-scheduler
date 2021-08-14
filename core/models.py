@@ -6,7 +6,7 @@ class Expert(models.Model):
     email = models.EmailField(max_length=45)
     description = models.CharField(max_length=500)
     contact = models.CharField(max_length=20)
-    token = models.CharField(max_length=256)
+    token = models.CharField(max_length=256, blank=True)
 
     def __str__(self):
         return self.name
