@@ -1,0 +1,22 @@
+{% include "base.html" %} {% block content %}
+<div class="container">
+    <table>
+        <tbody>
+            <tr>
+                <th>Date</th>
+                <td>{{event.date}}</td>
+            </tr>
+            <tr>
+                <th>Created by</th>
+                <td>{{event.user.username}}</td>
+            </tr>
+            <tr>
+                <th>Expert</th>
+                <td>
+                    {{event.expert.name}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

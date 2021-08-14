@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+    <h1>Confirm date</h1>
+    <form method="post">
+        {% csrf_token %} {{form.as_p}}
+        <button type="submit" class="btn waves-effect waves-light">
+        Reply: Happy with that
+        </button>
+    </form>
+    <a href="{% url 'core:pick_dates' event_slug %}" class="btn waves-effect waves-light">
+        Reply: Nope alt time
+    </a>
+</div>
+{% endblock %}

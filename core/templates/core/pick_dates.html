@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %} Pick dates {% endblock %} {% block content %}
+<div class="container">
+    <h1>Select dates</h1>
+    <form method="post">
+        {% csrf_token %} {{form.as_p}}
+        <button class="btn waves-effect waves-light" type="submit">Send to expert</button>
+    </form>
+    </form>
+</div>
+{% endblock %} {% block extra_javascript %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.timepicker');
+        options = {}
+        var instances = M.Timepicker.init(elems, options);
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.datepicker');
+        options = {}
+        var instances = M.Datepicker.init(elems, options);
+    });
+</script>
+{% endblock %}
